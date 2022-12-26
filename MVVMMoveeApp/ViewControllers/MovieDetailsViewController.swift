@@ -9,16 +9,16 @@ import UIKit
 
 class MovieDetailsViewController: UIViewController {
     
-    @IBOutlet weak var moviePosterImageView: UIImageView!
-    @IBOutlet weak var movieTitleLabel: UILabel!
-    @IBOutlet weak var moviePosterBackDropView: UIImageView!
-    @IBOutlet weak var movieOverviewLabel: UILabel!
-    @IBOutlet weak var relaseDateLabel: UILabel!
-    @IBOutlet weak var movieRuntimeLabel: UILabel!
-    @IBOutlet weak var movieRatingLabel: UILabel!
-    @IBOutlet weak var runtimePlaceHolder: UILabel!
-    @IBOutlet weak var genrePlaceHolder: UILabel!
-    @IBOutlet weak var movieGenreLabel: UILabel!
+    @IBOutlet private weak var moviePosterImageView: UIImageView!
+    @IBOutlet private weak var movieTitleLabel: UILabel!
+    @IBOutlet private weak var moviePosterBackDropView: UIImageView!
+    @IBOutlet private weak var movieOverviewLabel: UILabel!
+    @IBOutlet private weak var relaseDateLabel: UILabel!
+    @IBOutlet private weak var movieRuntimeLabel: UILabel!
+    @IBOutlet private weak var movieRatingLabel: UILabel!
+    @IBOutlet private weak var runtimePlaceHolder: UILabel!
+    @IBOutlet private weak var genrePlaceHolder: UILabel!
+    @IBOutlet private weak var movieGenreLabel: UILabel!
     
     let viewModel = MovieDetailViewModel()
     
@@ -30,7 +30,7 @@ class MovieDetailsViewController: UIViewController {
         viewModel.callDetail()
     }
     
-    func movieDetailsLoaded() {
+    private func movieDetailsLoaded() {
         self.view.activityStartAnimating(activityColor: UIColor.black, backgroundColor: UIColor.systemBackground)
         self.viewModel.moviesLoaded = { [weak self] (_, success) in
             if success {
@@ -44,7 +44,7 @@ class MovieDetailsViewController: UIViewController {
         }
     }
     
-    func configureUI() {
+    private func configureUI() {
         movieTitleLabel?.text = viewModel.movieDetails?.title
         moviePosterImageView.showImage(with: BaseURLs.getMoviePoster() + "\(viewModel.movieDetails?.posterPath ?? "")")
         moviePosterBackDropView?.showImage(with: BaseURLs.getMoviePoster() + "\(viewModel.movieDetails?.backdropPath ?? "")")
@@ -63,10 +63,8 @@ class MovieDetailsViewController: UIViewController {
         }
     }
     
-    func configPlaceHolders() {
+    private func configPlaceHolders() {
         runtimePlaceHolder.text = Localization.runtime
         genrePlaceHolder.text = Localization.genre
     }
-
 }
-

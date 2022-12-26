@@ -9,10 +9,10 @@ import UIKit
 
 class MoviesViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var topRatedMoviesLabel: UILabel!
-    @IBOutlet weak var popularMoviesTitleLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var topRatedMoviesLabel: UILabel!
+    @IBOutlet private weak var popularMoviesTitleLabel: UILabel!
     
     private var popularMoviesViewModel = PopularMoviesViewModel()
     private var topMoviesViewModel = TopMoviesViewModel()
@@ -25,7 +25,7 @@ class MoviesViewController: UIViewController {
         configPlaceHolders()
     }
     
-    func topRatedMoviesLoaded() {
+    private func topRatedMoviesLoaded() {
         self.topMoviesViewModel.moviesLoaded = { [weak self] (_, success) in
             if success {
                 DispatchQueue.main.async {
@@ -37,7 +37,7 @@ class MoviesViewController: UIViewController {
         }
     }
     
-    func popularMoviesLoaded() {
+    private func popularMoviesLoaded() {
         self.popularMoviesViewModel.moviesLoaded = { [weak self] (_, success) in
             if success {
                 DispatchQueue.main.async {
@@ -49,7 +49,7 @@ class MoviesViewController: UIViewController {
         }
     }
     
-    func configPlaceHolders() {
+    private func configPlaceHolders() {
         topRatedMoviesLabel.text = Localization.topRatedMoviesTitle
         popularMoviesTitleLabel.text = Localization.popularMoviesTitle
     }

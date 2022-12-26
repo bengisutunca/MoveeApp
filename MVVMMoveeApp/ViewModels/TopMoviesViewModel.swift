@@ -11,7 +11,6 @@ class TopMoviesViewModel: BaseViewModel {
     
     var moviesLoaded: (([MovieResponseModel]?, Bool) -> Void)?
     var moviesList: [MovieResponseModel] = []
-    var dataSource: MovieResponseModel?
     
     override func callService() {
         ApiManager().topRatedMovieList(completion: { [self] result in
@@ -39,5 +38,4 @@ class TopMoviesViewModel: BaseViewModel {
     func getMovie(index: Int) -> MovieResponseModel? {
         return self.moviesList[index]
     }
-
 }
