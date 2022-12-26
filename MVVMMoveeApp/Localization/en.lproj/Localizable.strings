@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  MVVMMoveeApp
+
+  Created by Tunca, Bengisu on 25.12.2022.
+  
+*/
+
+"popular_movies.title" = "Popular Movies";
+"top_rated_movies.title" = "Top Rated Movies";
+"genre" = "GENRE";
+"relase_date" = "Relase Date: ";
+"runtime" = "RUNTIME";
+"lang" = "en-EN";
+"hours" = "Hours";
+"minutes" = "Minutes";
+"ok" = "OK";
+"alert.message" = "There is nothing to see.";

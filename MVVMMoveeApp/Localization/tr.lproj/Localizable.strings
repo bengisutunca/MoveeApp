@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  MVVMMoveeApp
+
+  Created by Tunca, Bengisu on 25.12.2022.
+  
+*/
+
+"popular_movies.title" = "Popüler Filmler";
+"top_rated_movies.title" = "En Çok Değerlendirilen Filmler";
+"genre" = "TÜR";
+"relase_date" = "Çıkış Tarihi: ";
+"runtime" = "SÜRE";
+"lang" = "tr-TR";
+"hours" = "Saat";
+"minutes" = "Dakika";
+"ok" = "Tamam";
+"alert.message" = "Görülebilecek bir şey yok.";
