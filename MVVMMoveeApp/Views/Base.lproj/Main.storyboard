@@ -21,7 +21,7 @@
                                 <rect key="frame" x="-16" y="409.33333333333326" width="406" height="400.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="250" id="4Ja-A8-BVD" customClass="PopularMoviesTableViewCell" customModule="MVVMMoveeApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableViewCell" rowHeight="250" id="4Ja-A8-BVD" customClass="PopularMoviesTableViewCell" customModule="MVVMMoveeApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="406" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Ja-A8-BVD" id="gLF-2D-TnO">

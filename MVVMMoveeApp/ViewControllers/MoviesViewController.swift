@@ -61,10 +61,10 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PopularMoviesTableViewCell, let movieData = self.popularMoviesViewModel.getMovie (index: indexPath.row) else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as? PopularMoviesTableViewCell, let movieData = self.popularMoviesViewModel.getMovie (index: indexPath.row) else {
             return UITableViewCell()
         }
-        cell.setMovieData(movieData: movieData)
+        cell.setPopularMoviesData(movieData: movieData)
         return cell
     }
     
@@ -87,7 +87,7 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as? TopRatedMoviesViewCell, let movieData = self.topMoviesViewModel.getMovie (index: indexPath.item) else {
             return UICollectionViewCell()
         }
-        cell.setMovieDataa(movieData: movieData)
+        cell.setTopRatedMoviesData(movieData: movieData)
         return cell
     }
     

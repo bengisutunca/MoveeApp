@@ -24,7 +24,7 @@ class PopularMoviesViewModel: BaseViewModel {
             }
         })
     }
-
+    
     private func handleResponse(response: [MovieResponseModel]?, success: Bool) {
         if let moviesLoaded = moviesLoaded {
             moviesLoaded(response, success)
@@ -34,7 +34,7 @@ class PopularMoviesViewModel: BaseViewModel {
     func numberOrRows() -> Int {
         return self.moviesList.count
     }
-
+    
     func getMovie(index: Int) -> MovieResponseModel? {
         return self.moviesList[index]
     }

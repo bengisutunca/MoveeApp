@@ -17,7 +17,7 @@ final class PopularMoviesTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func setMovieData(movieData: MovieResponseModel) {
+    func setPopularMoviesData(movieData: MovieResponseModel) {
         moviePosterImageView.showImage(with: BaseURLs.getMoviePoster() + "\(movieData.posterPath ?? "")")
         movieTitleLabel.text = movieData.title
         movieRatingLabel.text = "⭐ \( String(describing: movieData.voteAverage ?? 0.0)) / 10"

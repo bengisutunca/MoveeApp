@@ -24,7 +24,7 @@ class TopMoviesViewModel: BaseViewModel {
             }
         })
     }
-
+    
     private func handleResponse(response: [MovieResponseModel]?, success: Bool) {
         if let moviesLoaded = moviesLoaded {
             moviesLoaded(response, success)

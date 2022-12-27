@@ -20,7 +20,7 @@ final class TopRatedMoviesViewCell: UICollectionViewCell {
         moviePosterImageView.addOverlay()
     }
     
-    func setMovieDataa(movieData: MovieResponseModel) {
+    func setTopRatedMoviesData(movieData: MovieResponseModel) {
         moviePosterImageView.showImage(with: BaseURLs.getMoviePoster() + "\(movieData.posterPath ?? "")")
         movieTitleLabel.text = movieData.title
         movieRatingLabel.text = "⭐ \( String(describing: movieData.voteAverage ?? 0.0)) / 10"
